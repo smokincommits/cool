@@ -2,7 +2,7 @@
 
 2.) Do not embed API keys directly in code: API keys that are embedded in code can be accidentally exposed to the public, basically do not store API key files in your app's source tree.
 
-3.) SELECT `properties`.`prop_id`, `adresses`.`adress`, ( SELECT * FROM `adresses` WHERE `prop_id` = `properties`.`prop_id` ) AS `adress` FROM `properties`
+3.) SELECT `properties`.`prop_id`, ( SELECT `address` FROM `addresses` WHERE `prop_id` = `properties`.`prop_id` ) AS `address` FROM `properties`;
 
 
 
